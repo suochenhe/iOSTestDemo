@@ -41,7 +41,6 @@
     NSLog(@"%30@ %10@ pointInside_begin",clsName,self.name);
     BOOL b = [self sch_pointInside:point withEvent:event];
     NSLog(@"%30@ %10@ pointInside_end   pointInside:%@",clsName,self.name,b ? @"YES" : @"NO");
-    
     return b;
 }
 @end
