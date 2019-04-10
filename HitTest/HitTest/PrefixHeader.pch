@@ -1,0 +1,22 @@
+//
+//  PrefixHeader.pch
+//  HitTest
+//
+//  Created by Selen on 2019/4/9.
+//  Copyright © 2019 selen. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import "UIResponder+name.h"
+#import "UIView+hitTest.h"
+#import "UIResponder+chain.h"
+
+#import "HitTestViewController.h"
+#import "ChainViewController.h"
+#import "NavigationController.h"
+#import "TabBarViewController.h"
+
+
+#endif /* PrefixHeader_pch */
