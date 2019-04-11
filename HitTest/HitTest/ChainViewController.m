@@ -10,6 +10,7 @@
 
 
 @interface ChainViewController ()
+@property(nonatomic,weak)UIViewController *childVC;
 
 @end
 
@@ -18,24 +19,38 @@
     [super viewDidLoad];
     self.title = @"响应者链Test";
     
+    UIViewController *childVC = [UIViewController new];
+    childVC.name = @"childVC";
+    [self addChildViewController:childVC];
+    _childVC = childVC;
+    childVC.view.frame = CGRectMake(0.f, 100.f, 100.f, 80.f);
+    childVC.view.backgroundColor = [UIColor blueColor];
+    [self.view addSubview:childVC.view];
+    
     CGRect frame = self.view.bounds;
-    frame.origin.y = 100;
-    frame.size.height -= 200;
+    frame.origin.y = 200;
+    frame.size.height -= 300;
     UIView *contentView = [[UIView alloc] initWithFrame:frame];
+    contentView.name = @"bgView";
     contentView.backgroundColor = [UIColor orangeColor];
     [self.view addSubview:contentView];
     
-    UIButton *btn1 = [self buttonWithFrame:CGRectMake(10, 10, 200, 30) title:@"pushVC" tag:0];
+    UIButton *btn1 = [self buttonWithFrame:CGRectMake(10, 10, 300, 30) title:@"pushVC" tag:1];
     [contentView addSubview:btn1];
     
-    UIButton *btn2 = [self buttonWithFrame:CGRectMake(10, 60, 200, 30) title:@"presentVC" tag:1];
+    UIButton *btn2 = [self buttonWithFrame:CGRectMake(10, 60, 300, 30) title:@"presentVC" tag:2];
     [contentView addSubview:btn2];
     
-    UIButton *btn3 = [self buttonWithFrame:CGRectMake(10, 110, 200, 30) title:@"logResponseChain" tag:2];
+    //btn3的响应链
+    UIButton *btn3 = [self buttonWithFrame:CGRectMake(10, 110, 300, 30) title:@"logResponseChain" tag:3];
     [contentView addSubview:btn3];
     
-    UIButton *btn4 = [self buttonWithFrame:CGRectMake(10, 250, 200, 30) title:@"presentback" tag:3];
+    //ChildVc.view的响应链
+    UIButton *btn4 = [self buttonWithFrame:CGRectMake(10, 160, 300, 30) title:@"logChildVcViewResponseChain" tag:4];
     [contentView addSubview:btn4];
+    
+    UIButton *btn5 = [self buttonWithFrame:CGRectMake(10, 250, 200, 30) title:@"presentback" tag:5];
+    [contentView addSubview:btn5];
     
 }
 
@@ -52,13 +67,13 @@
 
 - (void)btnClick:(UIButton *)sender{
     switch (sender.tag) {
-        case 0:{
+        case 1:{
             ChainViewController *vc = [ChainViewController new];
             vc.name = @"pushVc";
             [self.navigationController pushViewController:vc animated:YES];
         }
             break;
-        case 1:{
+        case 2:{
             ChainViewController *vc = [ChainViewController new];
             vc.name = @"presentVc";
             NavigationController *nav = [[NavigationController alloc] initWithRootViewController:vc];
@@ -66,11 +81,15 @@
             [self presentViewController:nav animated:YES completion:nil];
         }
             break;
-        case 2:{
+        case 3:{
             [sender logResponderChain];
         }
             break;
-        case 3:{
+        case 4:{
+            [self.childVC.view logResponderChain];
+        }
+            break;
+        case 5:{
             if (self.presentingViewController) {
                 [self dismissViewControllerAnimated:YES completion:nil];
             }

@@ -14,6 +14,8 @@
     objc_setAssociatedObject(self, @selector(name), name, OBJC_ASSOCIATION_COPY_NONATOMIC);
 }
 
+//controller.view.name和controller.name相同
+//name为空的情况下，name会返回为 控制器name 和 父视图class的拼接
 - (NSString *)name{
     NSString *name = objc_getAssociatedObject(self, _cmd);
     NSString *returnName = name;
@@ -22,11 +24,15 @@
     }else{
         
         if (returnName.length == 0) {
-            if ([self viewController]) {
-                returnName = [NSString stringWithFormat:@"vc:%@",[self viewController].name];
-            }else{
-                returnName = [self superViewName];
+            UIViewController *viewController = [self viewController];
+            if (viewController) {
+                returnName = [NSString stringWithFormat:@"vc:%@",viewController.name];
             }
+            NSString *superViewName = [self superViewName];
+            if (returnName && superViewName) {
+                returnName = [NSString stringWithFormat:@"%@ %@",returnName,superViewName];
+            }
+            
         }
     }
     
