@@ -23,8 +23,8 @@
     childVC.name = @"childVC";
     [self addChildViewController:childVC];
     _childVC = childVC;
-    childVC.view.frame = CGRectMake(0.f, 100.f, 100.f, 80.f);
-    childVC.view.backgroundColor = [UIColor blueColor];
+    childVC.view.frame = CGRectMake(0.f, 100.f, self.view.bounds.size.width, 80.f);
+    childVC.view.backgroundColor = [UIColor redColor];
     [self.view addSubview:childVC.view];
     
     CGRect frame = self.view.bounds;
