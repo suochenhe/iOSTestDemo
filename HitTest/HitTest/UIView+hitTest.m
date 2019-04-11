@@ -30,17 +30,17 @@
  */
 - (UIView *)sch_hitTest:(CGPoint)point withEvent:(UIEvent *)event{
     NSString *clsName = NSStringFromClass([self class]);
-    NSLog(@"%30@ %10@ hitTest_begin",clsName,self.name);
+    printf("%27s [%50s] hitTest_begin\n",clsName.UTF8String,self.name.UTF8String);
     UIView *view = [self sch_hitTest:point withEvent:event];
-    NSLog(@"%30@ %10@ hitTest_end       hitView:%@ %@",clsName,self.name,NSStringFromClass([view class]),view ? @(view.tag): @"") ;
+    printf("%27s [%50s] hitTest_end       hitView:%s[%s]\n",clsName.UTF8String,self.name.UTF8String,NSStringFromClass([view class]).UTF8String,[view.name ? : @"" UTF8String]) ;
     return view;
 }
 
 - (BOOL)sch_pointInside:(CGPoint)point withEvent:(UIEvent *)event{
     NSString *clsName = NSStringFromClass([self class]);
-    NSLog(@"%30@ %10@ pointInside_begin",clsName,self.name);
+    printf("%27s [%50s] pointInside_begin\n",clsName.UTF8String,self.name.UTF8String);
     BOOL b = [self sch_pointInside:point withEvent:event];
-    NSLog(@"%30@ %10@ pointInside_end   pointInside:%@",clsName,self.name,b ? @"YES" : @"NO");
+    printf("%27s [%50s] pointInside_end   pointInside:%s\n",clsName.UTF8String,self.name.UTF8String,[b ? @"YES" : @"NO" UTF8String]);
     return b;
 }
 @end

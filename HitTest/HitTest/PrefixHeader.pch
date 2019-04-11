@@ -9,6 +9,9 @@
 #ifndef PrefixHeader_pch
 #define PrefixHeader_pch
 
+//%30@格式在转换字符串会失效
+//#define NSLog(FORMAT, ...) printf("%s\n", [[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String]) 
+
 #import "UIResponder+name.h"
 #import "UIView+hitTest.h"
 #import "UIResponder+chain.h"

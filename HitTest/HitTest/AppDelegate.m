@@ -26,6 +26,7 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+
     
     UIWindow *window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     window.backgroundColor = [UIColor whiteColor];
@@ -64,37 +65,5 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
-
-//- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-//    NSLog(@"%s1",__func__);
-//    [super touchesBegan:touches withEvent:event];
-//    NSLog(@"%s2",__func__);
-//}
-//
-//- (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-//    NSLog(@"%s1",__func__);
-//    [super touchesEnded:touches withEvent:event];
-//    NSLog(@"%s2",__func__);
-//}
-//
-//- (void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-//    NSLog(@"%s1",__func__);
-//    [super touchesMoved:touches withEvent:event];
-//    NSLog(@"%s2",__func__);
-//}
-//
-//- (void)touchesCancelled:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-//    NSLog(@"%s1",__func__);
-//    [super touchesCancelled:touches withEvent:event];
-//    NSLog(@"%s2",__func__);
-//}
-//
-//- (void)touchesEstimatedPropertiesUpdated:(NSSet<UITouch *> *)touches{
-//    NSLog(@"%s1",__func__);
-//    [super touchesEstimatedPropertiesUpdated:touches];
-//    NSLog(@"%s2",__func__);
-//}
-
-
 
 @end

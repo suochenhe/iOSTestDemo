@@ -67,14 +67,14 @@
 }
 
 - (void)logResponderChain{
-    NSLog(@"-----------chain-----------");
+    printf("-----------chain-----------\n");
     UIResponder *next = self;
     while (next) {
-        NSLog(@"%@ %@",NSStringFromClass([next class]),next.name);
+        printf("%30s [%s]\n",NSStringFromClass([next class]).UTF8String,next.name.UTF8String);
         next = [next nextResponder];
         
     }
-    NSLog(@"---------------------------");
+    printf("---------------------------");
 }
 @end
 
