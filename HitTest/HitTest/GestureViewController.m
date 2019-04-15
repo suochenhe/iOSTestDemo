@@ -75,9 +75,9 @@
 - (void)view:(UIView *)view addGestureWithName:(NSString *)gestureName{
     UIGestureRecognizer *gesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapGestrue:)];
     gesture.name = gestureName;
-    gesture.cancelsTouchesInView = YES;//默认YES，手势响应后，cancel touch事件
-    gesture.delaysTouchesBegan = NO;   //默认NO，并行手势分析和view的touchBegan同时进行，识别后view的touchCancel 未识别 view 处理；YES 手势识别器，识别触摸对象后，处理触摸对象，不能识别，交给view的touchBegan  在手势响应识别之后，再开始touchBegan
-    gesture.delaysTouchesEnded = YES;  //默认YES，分析手势没有识别，将触摸对象交给View处理
+    gesture.cancelsTouchesInView = YES;//默认YES 在view的action method被调用之前，如果触摸被手势识别器识别，取消view上的触摸
+    gesture.delaysTouchesBegan = NO;   //默认NO YES:手势识别器，对触摸进行分析，如果不能识别，再交给view的touchBegan处理 NO :手势分析和view的touchBegan同时进行
+    gesture.delaysTouchesEnded = NO;  //默认YES，分析手势没有识别，将触摸对象交给View处理
     [view addGestureRecognizer:gesture];
 }
 
