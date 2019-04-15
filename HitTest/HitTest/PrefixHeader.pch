@@ -14,12 +14,12 @@
 
 #import "UIResponder+name.h"
 #import "UIView+hitTest.h"
-#import "UIResponder+chain.h"
 
 #import "HitTestViewController.h"
 #import "ChainViewController.h"
 #import "NavigationController.h"
 #import "TabBarViewController.h"
+#import "GestureViewController.h"
 
 
 #endif /* PrefixHeader_pch */

@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (instancetype)viewWithTag:(NSInteger)tag;
 
-- (instancetype)initWithTag:(NSInteger)tag;
++ (instancetype)viewWithName:(NSString *)name;
 
 @end
 

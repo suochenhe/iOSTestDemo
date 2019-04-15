@@ -19,8 +19,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSArray *classArray = @[@"HitTestViewController",@"ChainViewController"];
-    NSArray *titleArray = @[@"事件传递",@"响应者链"];
+    NSArray *classArray = @[@"HitTestViewController",@"ChainViewController",@"GestureViewController"];
+    NSArray *titleArray = @[@"事件传递",@"响应者链",@"手势"];
     for (NSInteger i = 0; i < titleArray.count; i ++){
         [self createTabBarViewControllerWithTitle:titleArray[i] class:classArray[i] index:i];
     }

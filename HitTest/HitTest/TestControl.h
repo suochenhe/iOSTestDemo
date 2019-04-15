@@ -1,8 +1,8 @@
 //
-//  UIResponder+chain.h
+//  TestControl.h
 //  HitTest
 //
-//  Created by Selen on 2019/4/9.
+//  Created by Selen on 2019/4/15.
 //  Copyright © 2019 selen. All rights reserved.
 //
 
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface UIResponder (chain)
+@interface TestControl : UIControl
 
 @end
 

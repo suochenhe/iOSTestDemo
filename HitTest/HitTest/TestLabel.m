@@ -14,16 +14,19 @@
 
 @implementation TestLabel
 + (instancetype)viewWithTag:(NSInteger)tag{
-    return [[self alloc] initWithTag:tag];
+    return [[self alloc] initWithName:@(tag).stringValue];
 }
 
-- (instancetype)initWithTag:(NSInteger)tag{
++ (instancetype)viewWithName:(NSString *)name{
+    return [[self alloc] initWithName:name];
+}
+
+- (instancetype)initWithName:(NSString *)name{
     self =  [super initWithFrame:CGRectZero];
     if (self) {
-        self.tag = tag;
-        self.name = @(tag).stringValue;
+        self.name = name;
         
-        self.text = @(tag).stringValue;
+        self.text = name;
         self.userInteractionEnabled = YES;
         self.textAlignment = NSTextAlignmentCenter;
 

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6C66A9F822644AB90024F171 /* GestureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C66A9F722644AB90024F171 /* GestureViewController.m */; };
+		6C66A9FB226477910024F171 /* TestControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C66A9FA226477910024F171 /* TestControl.m */; };
 		6CCDF5B2225CD88B0002344C /* UIView+hitTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CCDF5B1225CD88B0002344C /* UIView+hitTest.m */; };
 		6CCDF5B6225CDF9E0002344C /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CCDF5B5225CDF9E0002344C /* TabBarViewController.m */; };
 		6CCDF5B9225CDFC70002344C /* NavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CCDF5B8225CDFC70002344C /* NavigationController.m */; };
@@ -21,6 +23,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6C66A9F622644AB90024F171 /* GestureViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GestureViewController.h; sourceTree = "<group>"; };
+		6C66A9F722644AB90024F171 /* GestureViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GestureViewController.m; sourceTree = "<group>"; };
+		6C66A9F9226477900024F171 /* TestControl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestControl.h; sourceTree = "<group>"; };
+		6C66A9FA226477910024F171 /* TestControl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestControl.m; sourceTree = "<group>"; };
 		6CCDF5B0225CD88B0002344C /* UIView+hitTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+hitTest.h"; sourceTree = "<group>"; };
 		6CCDF5B1225CD88B0002344C /* UIView+hitTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+hitTest.m"; sourceTree = "<group>"; };
 		6CCDF5B3225CDE5A0002344C /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
@@ -81,12 +87,16 @@
 				6CCDF5B5225CDF9E0002344C /* TabBarViewController.m */,
 				6CCDF5B7225CDFC70002344C /* NavigationController.h */,
 				6CCDF5B8225CDFC70002344C /* NavigationController.m */,
-				6CEEF9F821CA55E9007CEB62 /* ChainViewController.h */,
-				6CEEF9F921CA55E9007CEB62 /* ChainViewController.m */,
 				6CCDF5C3225CF69D0002344C /* HitTestViewController.h */,
 				6CCDF5C4225CF69D0002344C /* HitTestViewController.m */,
+				6CEEF9F821CA55E9007CEB62 /* ChainViewController.h */,
+				6CEEF9F921CA55E9007CEB62 /* ChainViewController.m */,
+				6C66A9F622644AB90024F171 /* GestureViewController.h */,
+				6C66A9F722644AB90024F171 /* GestureViewController.m */,
 				6CEEFA0B21CA561C007CEB62 /* TestLabel.h */,
 				6CEEFA0C21CA561C007CEB62 /* TestLabel.m */,
+				6C66A9F9226477900024F171 /* TestControl.h */,
+				6C66A9FA226477910024F171 /* TestControl.m */,
 				6CCDF5B0225CD88B0002344C /* UIView+hitTest.h */,
 				6CCDF5B1225CD88B0002344C /* UIView+hitTest.m */,
 				6CCDF5BD225CE31A0002344C /* UIResponder+name.h */,
@@ -173,10 +183,12 @@
 				6CEEF9FA21CA55E9007CEB62 /* ChainViewController.m in Sources */,
 				6CCDF5B2225CD88B0002344C /* UIView+hitTest.m in Sources */,
 				6CCDF5BF225CE31A0002344C /* UIResponder+name.m in Sources */,
+				6C66A9F822644AB90024F171 /* GestureViewController.m in Sources */,
 				6CEEFA0521CA55EA007CEB62 /* main.m in Sources */,
 				6CCDF5C5225CF69D0002344C /* HitTestViewController.m in Sources */,
 				6CEEF9F721CA55E9007CEB62 /* AppDelegate.m in Sources */,
 				6CCDF5B9225CDFC70002344C /* NavigationController.m in Sources */,
+				6C66A9FB226477910024F171 /* TestControl.m in Sources */,
 				6CCDF5B6225CDF9E0002344C /* TabBarViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

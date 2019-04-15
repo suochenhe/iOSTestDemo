@@ -1,8 +1,8 @@
 //
-//  UIView+hitTest.h
+//  GestureViewController.h
 //  HitTest
 //
-//  Created by Selen on 2019/4/9.
+//  Created by Selen on 2019/4/15.
 //  Copyright © 2019 selen. All rights reserved.
 //
 
@@ -10,9 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-/**内部置换系统方法实现，在实现中添加log打印*/
-@interface UIView (hitTest)
-
+@interface GestureViewController : UIViewController
 
 @end
 
