@@ -67,7 +67,7 @@
     control1.name = @"control1";
     control1.frame = CGRectMake(140, 300, 100, 50);
     control1.backgroundColor = [UIColor blueColor];
-//    [contentView addSubview:control1];
+    [contentView addSubview:control1];
     [self view:control1 addGestureWithName:@"control1Gesture"];
     
 }

@@ -20,6 +20,4 @@
     return YES;
 }
 
-- (void)sendAction:(SEL)action to:(id)target forEvent:(UIEvent *)event;
-
 @end
